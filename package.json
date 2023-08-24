@@ -1,7 +1,7 @@
 {
-  "name": "solid-tailwind-ts-vite-template",
+  "name": "tiagomlopes-portfolio",
   "version": "1.0.0",
-  "author": "AR10",
+  "author": "Tiago Lopes",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -28,6 +28,7 @@
     "vite-plugin-solid": "2.7.0"
   },
   "dependencies": {
+    "firebase": "^10.3.0",
     "solid-js": "1.7.11"
   }
 }
