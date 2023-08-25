@@ -3,10 +3,14 @@ module.exports = {
   content: [
     './index.html',
     './src/**/*.{js,ts,jsx,tsx,css,md,mdx,html,json,scss}',
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
-  darkMode: 'class', // or 'media'
+  darkMode: 'class',
   theme: {
-    extend: {},
+    fontFamily: {
+      roboto: ['Roboto', 'sans-serif']
+    },
+    extend: {}
   },
-  plugins: [],
-};
+  plugins: [require('tw-elements/dist/plugin.cjs')]
+}
