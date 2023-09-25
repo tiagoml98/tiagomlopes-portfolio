@@ -1,8 +1,15 @@
 import { Ripple, initTE } from 'tw-elements'
-
-initTE({ Ripple })
+import { createEffect } from 'solid-js'
 
 const GitHubButton = () => {
+
+  createEffect(() => {
+    (async () => {
+      await import('tw-elements')
+      initTE({ Ripple }, { allowReinits: true }) // options if needed
+    })()
+  })
+
   return (
     <a href="http://github.com/tiagoml98" target="_blank">
       <button

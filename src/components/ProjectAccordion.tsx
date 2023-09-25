@@ -1,8 +1,15 @@
-import { Collapse, initTE } from 'tw-elements'
-
-initTE({ Collapse })
+import {Collapse, initTE, Ripple} from 'tw-elements'
+import {createEffect} from "solid-js";
 
 const ProjectAccordion = () => {
+
+  createEffect(() => {
+    (async () => {
+      await import('tw-elements')
+      initTE({ Collapse }, { allowReinits: true }) // options if needed
+    })()
+  })
+
   return (
     <div id="accordionFlushExample">
       <div

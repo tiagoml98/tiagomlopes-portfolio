@@ -1,8 +1,15 @@
 import { Ripple, initTE } from 'tw-elements'
-
-initTE({Ripple})
+import {createEffect} from "solid-js";
 
 const ResumeButton = () => {
+
+  createEffect(() => {
+    (async () => {
+      await import('tw-elements')
+      initTE({ Ripple }, { allowReinits: true }) // options if needed
+    })()
+  })
+
   return (
     <button
       type="button"
